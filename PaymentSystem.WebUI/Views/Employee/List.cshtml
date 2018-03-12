@@ -1,0 +1,16 @@
+﻿@using PaymentSystem.Domain.Entities
+@model IEnumerable<Employee>
+
+@{
+    ViewBag.Title = "Employees";
+}
+
+@foreach(var e in Model)
+{
+    <div>
+        <h3>@e.Name</h3>
+        @e.Address
+        <h4>@e.Salary.ToString("c")</h4>
+    </div>
+}
+
